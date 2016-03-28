@@ -16,10 +16,11 @@
                                 expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <bean id="placeholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-          p:fileEncoding="UTF-8"
-          p:ignoreResourceNotFound="true"
-          p:location="classpath*:config.properties"/>
+    <context:property-placeholder
+            file-encoding="UTF-8"
+            ignore-resource-not-found="true"
+            location="classpath:config.properties"/>
+
 
     <bean id="lettuceConnectionFactory"
           class="org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory"
