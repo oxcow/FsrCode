@@ -14,7 +14,7 @@ import java.util.Map;
  */
 @Controller
 public class ErrorController {
-    @RequestMapping(path = "/error", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(path = "/error/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public Map<String, Object> handle(HttpServletRequest request) {
         Map<String, Object> map = new HashMap<String, Object>();
